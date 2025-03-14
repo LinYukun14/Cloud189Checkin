@@ -208,7 +208,7 @@ function getLineIndex(str, lineIndex) {
     const events = recording.replay();
     const content = events.map((e) => `${e.data.join("")}`).join("  \n");
 	const lineCount = logs.split('\n').length;
-    push(` ${getLineIndex(logs,lineCount - 6).slice(10, 14)}天翼${getLineIndex(logs, lineCount - 3).slice(-9)}`, logs + content);
+    push(` ${getLineIndex(logs,5).slice(10, 14)}天翼${getLineIndex(logs, 8).slice(-9)}`, logs + content);
     recording.erase();
     cleanLogs();
   }
